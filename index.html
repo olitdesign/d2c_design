@@ -9,13 +9,13 @@
 :root{
   --bg:#F5F3F8; --surface:#FFFFFF; --ink:#2E2A3B; --muted:#7A748C; --line:#E4E0EC;
   --violet:#5A1CFF; --violet-soft:#EEE8FF; --mid:#9B7BFF; --sage:#CBFF3D; --sage-ink:#2B3A00;
-  --red:#C62828; --red-bg:#FFF1F1; --red-line:#E57373;
+  --red:#B5473F; --red-bg:#FCF5F4; --red-line:#EBCBC7; --red-bar:#D99A94;
 }
 @media (prefers-color-scheme: dark){
   :root{
     --bg:#1B1826; --surface:#252233; --ink:#EEEBF5; --muted:#A8A2BC; --line:#3A3550;
     --violet:#9B7BFF; --violet-soft:#2E2A42; --mid:#6F4DFF; --sage:#CBFF3D; --sage-ink:#2B3A00;
-    --red:#FF8A8A; --red-bg:#3A2125; --red-line:#C95C5C;
+    --red:#F0A5A0; --red-bg:#33272B; --red-line:#5E3F44; --red-bar:#A8686A;
   }
 }
 *{box-sizing:border-box;margin:0;padding:0}
@@ -51,12 +51,12 @@ h3{font-size:18px;font-weight:700;margin:4px 0 12px}
 code.chip{background:var(--violet-soft);color:var(--violet);padding:2px 8px;border-radius:6px;font-weight:600;font-size:.92em}
 
 /* 강조 박스 (급건 / 프로모션 유의사항 공용) */
-.alert{margin-top:18px;background:var(--red-bg);border:1.5px solid var(--red-line);border-left:7px solid var(--red);border-radius:12px;padding:14px 20px;box-shadow:0 3px 10px rgba(198,40,40,.1)}
+.alert{margin-top:18px;background:var(--red-bg);border:1.5px solid var(--red-line);border-left:7px solid var(--red-bar);border-radius:12px;padding:14px 20px;}
 .alert .title{display:block;color:var(--red);font-size:17px;font-weight:800;text-align:left;margin-bottom:8px;letter-spacing:-.01em}
 .alert ul{list-style:none}
 .alert li{position:relative;padding-left:18px;margin-top:4px;font-weight:600;font-size:15px;line-height:1.55}
-.alert li::before{content:"";position:absolute;left:2px;top:.65em;width:6px;height:6px;border-radius:50%;background:var(--red)}
-.alert b{color:var(--red);background:rgba(229,115,115,.18);padding:0 4px;border-radius:4px}
+.alert li::before{content:"";position:absolute;left:2px;top:.65em;width:6px;height:6px;border-radius:50%;background:var(--red-bar)}
+.alert b{color:var(--red);background:rgba(217,154,148,.2);padding:0 4px;border-radius:4px}
 
 .designers{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:18px}
 .person{display:flex;align-items:center;gap:10px;background:var(--surface);border:1px solid var(--line);border-radius:999px;padding:10px 22px;font-weight:700}
