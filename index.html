@@ -201,6 +201,12 @@ footer{margin-top:48px;padding:24px 0 44px;color:var(--muted);font-size:14px;bor
 
 <script src="rnr-data.js"></script>
 <script>
+/* 페이지를 열면 항상 맨 위부터 보이게 (주소에 #이 있을 땐 해당 위치로) */
+if ("scrollRestoration" in history) history.scrollRestoration = "manual";
+function toTop(){ if (!location.hash) window.scrollTo({top:0,left:0,behavior:"instant"}); }
+toTop();
+window.addEventListener("load", toTop);
+window.addEventListener("pageshow", toTop);
 function esc(s){return String(s).replace(/&/g,"&amp;").replace(/</g,"&lt;")}
 Object.keys(DATA).forEach(function(id){
   var html = "";
